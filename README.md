@@ -22,7 +22,7 @@
  
  Visitors:
  
- See the three most visited festivals on home page.
+ Can see most visited festivals on home page.
  On clicking review button, redirect to Login Page.
  
  Registered / Logged-in Users can:
