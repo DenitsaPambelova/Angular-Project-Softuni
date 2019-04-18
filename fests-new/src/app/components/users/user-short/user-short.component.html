@@ -1,0 +1,10 @@
+<div class="row" *ngIf="user && isAdmin">
+	<div class="col-md-11">
+		<a routerLink="/users/profile/{{user._id}}">{{user.username}}</a>
+	</div>
+	<div class="col-md-1">
+		<a routerLink="/users/edit/{{user._id}}">
+			<img class="icon edit-icon" src="http://www.iconhot.com/icon/png/bunch-cool-bluish-icons/256/edit-29.png" />
+		</a>
+	</div>
+</div>

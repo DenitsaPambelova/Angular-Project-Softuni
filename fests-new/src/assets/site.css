@@ -1,0 +1,19 @@
+.main {
+	margin: 70px;
+}
+
+.italic {
+	font-style: italic; 
+}
+
+.white {
+	color: white;
+}
+
+.icon {
+	height: 55px;
+}
+
+.icon:hover {
+	cursor: pointer;
+}

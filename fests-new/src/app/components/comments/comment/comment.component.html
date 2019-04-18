@@ -1,0 +1,36 @@
+<div *ngIf="comment">
+<div *ngIf="!activeEdit" class="row">
+<div class="col-md-8">
+<p class="white">{{comment.text}}</p>
+<span class="small italic">
+Posted by <a routerLink="/users/profile/{{comment._acl.creator}}">{{comment.username}}</a> on {{comment._kmd.ect | date}}
+</span> 
+&nbsp;&nbsp;
+</div>
+<div class="col-md-2">
+
+<img *ngIf="canEdit" (click)="edit()" class="icon edit-icon" src="http://www.iconhot.com/icon/png/bunch-cool-bluish-icons/256/edit-29.png" />
+&nbsp;
+<img *ngIf="canEdit" (click)="delete()" class="icon delete-icon" src="https://cdn2.iconfinder.com/data/icons/e-business-helper/240/627249-delete3-256.png" />
+
+</div>
+<div class="col-md-2">
+<span>
+{{comment.likeUsers.length}} likes <img *ngIf="canLike" (click)="like()" class="icon" src="https://www.shareicon.net/data/256x256/2017/06/05/886714_like_512x512.png" />
+</span>
+</div>
+</div>
+
+<div *ngIf="activeEdit" class="row">
+<div [@fromLeft] class="col-md-12">
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input formControlName="text" type="text" class="form-control" id="text" 
+      required>
+    </div>
+    <button [disabled]="commentForm.invalid" type="submit" class="btn btn-success">Edit</button>
+     <button (click)="cancel()" type="submit"  class="btn btn-default">Cancel</button>
+  </form>
+</div>
+</div>
+</div>

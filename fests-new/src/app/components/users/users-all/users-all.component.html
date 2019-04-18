@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+	<div [@fromLeft] class="panel-heading">
+	    <h3 class="panel-title col-md-12">All users</h3>    
+	</div> 
+	<div *ngIf="users" class="col-md-12">
+	    <ul class="list-group">
+	        <li [@fromRight] class="list-group-item" *ngFor="let user of users">
+	        	<app-user-short *ngIf="user" [user]="user"></app-user-short>
+	        </li>
+	    </ul>
+	    <br>
+	</div> 
+</div> 

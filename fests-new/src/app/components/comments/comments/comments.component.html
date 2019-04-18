@@ -1,0 +1,17 @@
+<div *ngIf="comments" class="col-md-12">
+    <ul class="list-group">
+        <li [@fromRight] class="list-group-item" *ngFor="let comment of comments">
+        	<app-comment *ngIf="comment" [comment]="comment"></app-comment>
+        </li>
+        <li class="list-group-item">
+        	  <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+			    <div class="form-group">
+			      <input formControlName="text" type="text" class="form-control" id="text" 
+			      required>
+			    </div>
+			    <button [disabled]="commentForm.invalid" type="submit" class="btn btn-success">Add</button>
+			  </form>
+        </li>
+    </ul>
+    <br>
+</div> 

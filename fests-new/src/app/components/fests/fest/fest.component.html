@@ -1,0 +1,10 @@
+<div>
+	<img *ngIf="hotel.imageUrl" class="thumbnail"
+		src="{{hotel.imageUrl}}">
+	<h5>{{hotel.name}}</h5>
+	<p>City: {{hotel.city}}</p>
+	<p>Rating: {{hotel.raiting | number | number : '1.2-2'}}</p>
+	<p>
+		<a class="btn btn-default" routerLink="/fests/review/{{hotel._id}}">View Review</a>
+	</p>
+</div>

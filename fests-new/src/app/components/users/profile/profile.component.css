@@ -1,0 +1,19 @@
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+.edit-icon {
+	width: 40px;
+	height: 40px;
+}
+
+.unban-icon {
+	width: 40px;
+	height: 40px;
+}
+
+.delete-icon {
+	width: 30px;
+	height: 30px;
+}

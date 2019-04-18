@@ -1,0 +1,23 @@
+
+<h1 [@fromLeft]>Edit user</h1>
+  <form [@fromRight] [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input formControlName="email"  type="text" class="form-control" id="email"
+      required>
+      <div [hidden]="userForm.controls.email.valid || userForm.controls.email.pristine" class="alert alert-danger">
+      	Invalid email.
+      </div>
+    </div>
+    <div *ngIf="isAdmin" class="row col-md-12">
+        UserStatus:  &nbsp;&nbsp;
+     <div class="form-group">
+         	<select formControlName="isBanned">
+         		<option [value]="false">Not blocked</option>
+         		<option [value]="true">Blocked</option>
+         	</select>
+         	<span>&nbsp;</span>
+     </div>
+    </div>
+    <button [disabled]="userForm.invalid" type="submit" class="btn btn-success">Edit</button>
+  </form>

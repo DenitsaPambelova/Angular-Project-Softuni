@@ -1,0 +1,18 @@
+<div *ngIf="hotel" class="row">
+	<div class="col-md-8">
+		<p class="white">
+			{{hotel.name}} 
+		</p>
+		<span>
+			Added on {{hotel._kmd.ect | date}}
+		</span>
+	</div>
+	<div class="col-md-2">
+		<img *ngIf="canEdit" routerLink="/fests/edit/{{hotel._id}}" class="icon edit-icon" src="http://www.iconhot.com/icon/png/bunch-cool-bluish-icons/256/edit-29.png" />
+      	&nbsp;
+      	<img *ngIf="canEdit" routerLink="/fests/delete/{{hotel._id}}" class="icon delete-icon" src="https://cdn2.iconfinder.com/data/icons/e-business-helper/240/627249-delete3-256.png" />
+	</div>
+	<div class="col-md-2">
+		<a class="btn btn-default" routerLink="/fests/review/{{hotel._id}}">View Review</a>
+	</div>
+</div>

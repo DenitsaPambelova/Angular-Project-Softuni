@@ -1,0 +1,19 @@
+footer {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	height: 50px;
+	margin-top: 150px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+}
+
+.center {
+	margin: auto;
+	text-align: center;
+	vertical-align: middle;
+}

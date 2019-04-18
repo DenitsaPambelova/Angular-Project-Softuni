@@ -1,0 +1,19 @@
+<div [@fromRight] class="panel-body">
+<div class="row">
+	<div *ngIf="comments" class="col-md-12">
+	  <ul class="list-group">
+	      <li class="list-group-item" *ngFor="let comment of comments">
+	      	<app-profile-comment [comment]="comment"></app-profile-comment>
+	      </li>
+	  </ul>
+	    <div *ngIf="comments.length < 1" class="list-group">
+	      	<div *ngIf="isOwner" class="list-group-item">
+	      		<p>You haven't added comments <a routerLink="/fests">See all festivals?</a></p>
+	      	</div>
+	      	<div *ngIf="!isOwner" class="list-group-item">
+	      		<p>Nothing to show!</p>
+	      	</div>
+	    </div>  
+	</div>
+</div>
+</div>

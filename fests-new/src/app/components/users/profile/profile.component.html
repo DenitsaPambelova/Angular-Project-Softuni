@@ -1,0 +1,35 @@
+<div *ngIf="user">
+<h1 *ngIf="user.isDeleted" class="panel-title">User is deleted!</h1>
+<div class="panel panel-default">
+  <div [@fromLeft] class="panel-heading">
+      <h3 class="panel-title">User data</h3>    
+  </div> 
+      <div [@fromRight] class="list-group">
+      	<div  class="list-group-item">
+      		<p>Username: {{user.username}}</p>
+      		<p>Email: {{user.email}}</p>
+      		<p *ngIf="canEdit">Role: {{user.role}}</p>
+      		<p *ngIf="user.isBanned" class="red"> User is blocked!</p>
+      		<p *ngIf="(!user.isBanned && canEdit) || isAdmin ">
+      			<a routerLink="/users/edit/{{user._id}}"><img class="icon edit-icon" src="http://www.iconhot.com/icon/png/bunch-cool-bluish-icons/256/edit-29.png" /></a>
+      		</p>
+      	</div>
+      </div>
+</div>
+
+<br /><br />
+<div class="panel panel-default">
+  <div [@fromLeft] class="panel-heading">
+      <h3 class="panel-title">Added festivals</h3>
+  </div> 
+  <app-profile-hotels [userId]="user._id"></app-profile-hotels>
+</div>
+
+<br /><br />
+<div class="panel panel-default">
+  <div [@fromLeft] class="panel-heading">
+      <h3 class="panel-title">Added comments</h3>    
+  </div> 
+  <app-profile-comments [userId]="user._id"></app-profile-comments> 
+</div>
+</div>

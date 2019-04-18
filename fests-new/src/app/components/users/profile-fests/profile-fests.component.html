@@ -1,0 +1,20 @@
+<div [@fromRight] class="panel-body">
+<div class="row">
+<div *ngIf="hotels" class="col-md-12">
+   	<ul class="list-group">
+    	<li class="list-group-item" *ngFor="let hotel of hotels">
+     		<app-profile-hotel [hotel]="hotel"></app-profile-hotel>	
+        </li> 
+    </ul>  
+    
+    <div *ngIf="hotels.length < 1" class="list-group">
+      	<div *ngIf="isOwner" class="list-group-item">
+      		<p>You haven't added festivals <a routerLink="/fests/add">Would you like to add a festival?</a></p>
+      	</div>
+      	<div *ngIf="!isOwner" class="list-group-item">
+     		<p>Nothing to show!</p>
+     	</div>
+    </div> 
+</div> 
+</div> 
+</div> 

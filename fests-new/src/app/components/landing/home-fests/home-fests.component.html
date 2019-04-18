@@ -1,0 +1,13 @@
+
+<div class="panel panel-default">
+  <div [@fromLeft] class="panel-heading">
+      <h3 class="panel-title">Most popular trance festivals worldwide</h3>
+  </div> 
+  <div class="panel-body">
+      <div class="row">
+          <div [@fromRight] *ngFor="let hotel of hotels" class="col-md-4">
+				<app-home-hotel [hotel]="hotel"></app-home-hotel>
+          </div>    
+      </div>    
+  </div>   
+</div>
