@@ -1,11 +1,12 @@
 Angular Project Trance Festivals worldwide 2019
  
  Small website containing information about trance music events all over the world.
- Using Angular for front-end, Kinvey as backend, Bootstrap, Toastr.
+ Using Angular for front-end, Kinvey as backend; Bootstrap; Toastr.
  
  Short info and functionalities:
  
  Components:
+ 
  - Authentication module  - contains Login and Register components.
  - Comments module  - contains components with logic and forms for add,edit,delete comments;
  - Fests module - contains components for add,edit and delete festivals.
