@@ -30,7 +30,7 @@ Angular Project Trance Festivals worldwide 2019
  Add and/or edit new post for festivals
  Add and/or edit their comments below each post.
  Like other users' comments.
- Edit their own profile /the e-mail address/.
+ Edit their own profile - the e-mail address.
  View published festivals by all users.
  
  
@@ -38,8 +38,6 @@ Angular Project Trance Festivals worldwide 2019
  
  Delete all posts
  Delete all comments
- Edit his profile
  Delete / Edit users
- Block  / Unblock selected users
- Like other users' comments.
+ Block  / Unblock selected users.
  Admin role is implemented with Kinvey role Id.
